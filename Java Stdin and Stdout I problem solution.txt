@@ -1,0 +1,16 @@
+import java.util.*;
+
+public class Read{
+    public static void main(String[] args){
+    Scanner scan = new Scanner(System.in);   
+    int a = scan.nextInt(); //taking integer input
+    int b = scan.nextInt(); //taking integer input
+    int c = scan.nextInt(); //taking integer input
+    scan.close();
+    
+    System.out.println(a);
+    System.out.println(b);
+    System.out.println(c);
+    }
+    
+}
