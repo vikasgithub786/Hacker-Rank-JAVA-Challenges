@@ -1,0 +1,21 @@
+import java.util.*;
+
+public class Inout{
+    
+    public static void main(String[] args){
+        
+        Scanner scan = new Scanner(System.in);   // creating scanner class object to take input
+         
+        
+        int a = scan.nextInt();		     // taking integer input 
+        Double b = scan.nextDouble();	     // taking double input
+        scan.nextLine();
+        String c = scan.nextLine();          // taking string input
+        
+        System.out.println("String: " +c);   // printing string 
+        System.out.println("Double: " +b);   // printing double value
+        System.out.println("Int: " +a);       // printing integer value 
+        
+        
+    }
+}
