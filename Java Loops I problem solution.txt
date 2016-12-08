@@ -1,0 +1,16 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution 
+{
+    public static void main(String[] args)
+    {       
+        Scanner scan = new Scanner(System.in);  //creating scanner class object to take user input
+        int number = scan.nextInt();	       // taking integer input from user for which table has to be printed
+        for(int i=1;i<=10;++i)
+	{ 
+            int product = number*i;	        
+            System.out.println(number + " x " + i + " = " + product); //printing table of input number in required format
+        }        
+    }
+}
