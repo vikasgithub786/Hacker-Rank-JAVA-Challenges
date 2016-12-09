@@ -1,0 +1,28 @@
+import java.util.*;
+import java.io.*;
+
+class Solution
+{
+    public static void main(String []args)
+   {
+        Scanner in = new Scanner(System.in);     // creating scanner class object to take standard input
+        int t=in.nextInt();			// taking integer input from user
+        for(int i=0;i<t;i++)
+	{
+            int a = in.nextInt();		// taking integer input from user
+            int b = in.nextInt();		// taking integer input from user
+            int n = in.nextInt();		// taking integer input from user
+            double k = a;
+            
+            for(int j=0;j<n;++j)
+	    {
+                double l = Math.pow(2,j);
+                k=k+ l*b ; 
+                int p = (int) k;		// typecasting k to integer type from double
+                System.out.print(p + " ");     
+            }            
+             System.out.println("");
+        }
+        in.close();
+    }
+}
