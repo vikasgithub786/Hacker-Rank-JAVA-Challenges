@@ -1,0 +1,13 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+   public static void main(String[] args) {
+   Scanner scan = new Scanner(System.in);  		// creating scanner class object to take user input
+   for(int i = 1; scan.hasNext()== true; i++){		// condition checks whether input is available in next line
+       System.out.println(i + " " + scan.nextLine());
+   }
+}
+
+}
