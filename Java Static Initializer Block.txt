@@ -5,47 +5,49 @@ import java.math.*;
 import java.util.regex.*;
 
 public class Solution 
-{ 	
-		static int Breadth;
-		static int Height;
-		static boolean flag;
+{
 
 
-               static
-               {
+	static int Breadth;
+	static int Height;
+	static boolean flag;
+
+
+	static  						//  static block
+	{
           
-                Scanner sc = new Scanner(System.in);   // creating scanner class object to take input from user
-                int a = sc.nextInt();			// taking integer input from user
-                if(a>0 && a<=100){
-                    Breadth=a;
+                Scanner sc = new Scanner(System.in);   		// creating scanner class object to take user input
+                int a = sc.nextInt();     			// taking integer user input 
+                if(a>0 && a<=100)
+		{
+                    Breadth =a;					// assigning integer value as breadth
                 }
-                int b = sc.nextInt();			// taking integer input from user
-                if(b>0 && b<=100){
-                    Height=b;
+                int b = sc.nextInt();				// taking integer user input
+                if(b>0 && b<=100)
+		{
+                    Height=b;					// assigning integer value as Height
                 }
-                 if((Breadth <=100)&& (Breadth > 0) && (Height <=100)&& (Height > 0))
-		  {
+                if((Breadth <=100) && (Breadth > 0) && (Height <=100)&& (Height > 0))
+		{
                      flag =true;
-		  }
+		}
                   else
 		  {
                       System.out.println("java.lang.Exception: Breadth and height must be positive");
                   }
                  
-            }
+         }
     
         
-          public static void main(String[] args)
-  		{
-		   if(flag)
-		   {
-			int area=Breadth*Height;		// calculating area
+	public static void main(String[] args)
+	{
+		if(flag)
+		{
+			int area=Breadth*Height;      // calculating area 
 			System.out.print(area);
-		   }
+		}
 		
-	       }					//end of main
+	}//end of main
 
-}							//end of class
-
-
+}//end of class
 
