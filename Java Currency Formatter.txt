@@ -1,0 +1,20 @@
+
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+    
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);			// creating scanner class object
+        double payment = scanner.nextDouble();				//taking user input in form of double 
+        scanner.close();
+        System.out.printf("US format = $%,.2f %n", payment);		// formatting the output using printf function
+        System.out.printf("India format = Rs.%,.2f ", payment);
+        
+        
+    }
+}
+
