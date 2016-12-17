@@ -1,0 +1,35 @@
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution
+{
+
+    public static void main(String[] args) 
+   {
+        Scanner in = new Scanner(System.in);   			// creating scanner class object
+        String month = in.next();				//taking user input in form of string
+        String day = in.next();					//taking user input in form of string
+        String year = in.next();				//taking user input in form of string
+        int m=Integer.parseInt(month)-1;			// converting string input into integer type
+        int d=Integer.parseInt(day);				// converting string input into integer type
+        int y=Integer.parseInt(year);				// converting string input into integer type
+
+        Calendar cal=Calendar.getInstance();
+	cal.set(y, m, d);
+        int val = cal.get(Calendar.DAY_OF_WEEK);
+	        
+        if(val==1){System.out.println("SUNDAY");}
+        if(val==2){System.out.println("MONDAY");}
+        if(val==3){System.out.println("TUESDAY");}
+        if(val==4){System.out.println("WEDNESDAY");}
+        
+        if(val==5){System.out.println("THURSDAY");}
+        if(val==6){System.out.println("FRIDAY");}
+        if(val==7){System.out.println("SATURDAY");}
+        
+        
+    } 
+}
