@@ -1,0 +1,36 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        
+        Scanner sc=new Scanner(System.in);			//creating scanner class object to take user input
+        String a = sc.nextLine();				//taking string input from user     
+        char[] c = new char[50];				// creating array of char type
+        char[] p = new char[50];
+        c= a.toCharArray();					//converting string into character array
+        int k = a.length();					//calclating and saving length of the string
+        String o="";
+        for(int j=k-1 ; j>=0; --j)
+            {
+                     
+              o = o + c[j];
+
+        }
+        
+        int i = a.compareTo(o);
+        
+        if(i==0)
+            {
+            
+            System.out.println("Yes");
+        }
+        else{
+            System.out.println("No");
+        }
+        
+        
+        
+    }
+}
