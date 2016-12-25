@@ -1,0 +1,78 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+ 	static boolean isAnagram(String a, String b) 
+	{
+		boolean f =false;
+       	        String y = a.toUpperCase();		//converting string characters into uppercase
+       	        String z = b.toUpperCase();		//converting string characters into uppercase
+ 
+                char[] c1 = new char[50]; 
+                char[] c2 = new char[50]; 
+              
+                c1= y.toCharArray();
+                c2= z.toCharArray();
+
+                int n = y.length();
+                int m = z.length();
+		char d = 'l';
+
+                   for(int i=0;i<n;i++)
+		   {
+                    
+                       for(int j=i+1;j<n;j++)
+  		       {
+ 			  if(c1[i]>c1[j])
+                          {
+                             d= c1[i];
+                             c1[i] = c1[j];
+                             c1[j] = d;
+
+                          }
+                       }
+                   }
+            
+                for(int i=0;i<m;i++)
+		{
+                    
+                    for(int j=i+1;j<m;j++)
+	    	    {
+			 if(c2[i]>c2[j])
+                         {
+                            d= c2[i];
+                            c2[i] = c2[j];
+                            c2[j] = d;
+
+                         }
+                    }
+                }
+        
+        
+        
+                      y = new String(c1);
+                      z = new String (c2);
+
+            
+                      if(y.compareTo(z) == 0)
+	   	      {
+                
+                         f= true;
+                      }
+
+        return f;
+  
+       }
+
+ public static void main(String[] args)
+   {
+    
+        Scanner scan = new Scanner(System.in);			//creating scanner class object to take user input
+        String a = scan.next();					//taking string input from user
+        String b = scan.next();					//taking string input from user
+        scan.close();
+        boolean ret = isAnagram(a, b);
+        System.out.println( (ret) ? "Anagrams" : "Not Anagrams" );
+    }
+}
