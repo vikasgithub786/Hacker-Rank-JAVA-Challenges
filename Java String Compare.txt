@@ -1,4 +1,3 @@
-
 import java.io.*;
 import java.util.*;
 import java.text.*;
@@ -8,7 +7,6 @@ import java.util.regex.*;
 public class Solution {
 
     public static void main(String[] args) {
-        
         Scanner s = new Scanner(System.in);			//creating scanner class object to take user input
         String h = s.nextLine();				//taking string input from user
         int k = s.nextInt();					//taking integer input from user
@@ -41,6 +39,5 @@ public class Solution {
         
     }
         
-    
-    
+        
     }
