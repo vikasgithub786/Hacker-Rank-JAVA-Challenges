@@ -1,0 +1,21 @@
+
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        
+        Scanner scan = new Scanner(System.in);			//creating scanner class object to take user input
+        BigInteger a = scan.nextBigInteger();			//taking BigInteger input from user
+        BigInteger b = scan.nextBigInteger();			//taking BigInteger input from user
+        BigInteger sum = a.add(b);				//adding two inputs
+        BigInteger product = a.multiply(b);			//mulitiplying two inputs
+        System.out.println(sum.toString());
+        System.out.println(product.toString());
+        
+    }
+}
