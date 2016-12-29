@@ -1,0 +1,50 @@
+
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);			//creating scanner class object to take user input
+        String s = scan.nextLine();				//taking string input from user
+        scan.close();
+        int count =0;
+
+        s = s+'!';
+        int k =0;
+        String[] y = new String[200000];
+        for(int i = 0;i<s.length() ; i++){
+            
+            if((s.charAt(i)=='!') || (s.charAt(i)==' ')|| (s.charAt(i)==',')||(s.charAt(i)=='?')||(s.charAt(i)=='.')||                             (s.charAt(i)=='_')||(s.charAt(i)=='@')||((int)s.charAt(i)==39)){
+                
+                if(k==i){
+                    
+                    k=i+1;
+                }
+                
+                else{
+                     ++count;
+                   y[count] = (s.substring(k,i));
+                    k=i+1;                
+                }
+                
+                
+                
+            }
+            
+            
+            
+        }
+        
+        
+        System.out.println(count);
+        for(int m =1;m<=count ; m++){
+            
+            System.out.println(y[m]);
+            
+        }
+        
+
+        // Write your code here.
+    }
+}
