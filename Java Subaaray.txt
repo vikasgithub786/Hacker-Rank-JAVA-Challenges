@@ -1,0 +1,51 @@
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        
+        Scanner scan = new Scanner(System.in);        //creating scanner class object to take user input
+        int n = scan.nextInt();			      // taking integer input from user
+        int[] num = new int[n];
+        for(int j =0 ; j<=n-1 ; j++)
+        {
+            num[j]=scan.nextInt();
+        }
+        
+        int counter = 0;
+        
+        for(int i=0;i<= n-1;i++)
+        {            
+            int run =0;
+            while(run <= (n-(i+1)))
+            {   
+                int total = 0;
+                int k =run;
+                int g = run +  i;
+                while( k<=g)
+                {
+                   total = total + num[k];
+                    k++;
+                    
+                   
+                }
+               
+                if (total<0)
+                {
+                    
+                    counter++;
+                }
+                
+                run++;
+               
+            }
+     
+        }
+        System.out.println(counter);
+ 
+    }
+}
