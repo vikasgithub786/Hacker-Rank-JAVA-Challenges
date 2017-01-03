@@ -1,0 +1,52 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        
+        
+        Scanner sc = new Scanner(System.in);
+        String s = sc.nextLine();
+        int k = Integer.parseInt(s);
+        int[][] num = new int[k][];
+        for(int x =0; x<k ; x++)
+        {
+            String t = sc.nextLine();
+            String[] num1 = t.split(" ");
+            int a = Integer.parseInt(num1[0]);
+            if(a == 0)
+            {                
+               num[x] = new int[0]; 
+            }
+            else
+            {   num[x] = new int[a];
+                for(int y=0;y<a;y++)
+                {
+                   num[x][y] = Integer.parseInt(num1[y+1]) ;               
+                }
+            }
+        }
+        
+        
+        s = sc.nextLine();
+        int l = Integer.parseInt(s);
+        
+         for(int z =0; z<l ; z++)
+        {
+            String q = sc.nextLine();
+            String[] num2 = q.split(" ");
+            int b = Integer.parseInt(num2[0]);
+            int c = Integer.parseInt(num2[1]);
+             try{System.out.println(num[b-1][c-1]);}
+             catch(Exception e){
+                 System.out.println("ERROR!");
+             }
+             
+   
+        }
+        
+        
+    
+    }
+}
