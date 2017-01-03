@@ -6,8 +6,8 @@ public class Solution {
     public static void main(String[] args) {
         
         
-        Scanner sc = new Scanner(System.in);
-        String s = sc.nextLine();
+        Scanner sc = new Scanner(System.in);            //creating scanner class object to take user input
+        String s = sc.nextLine();                       //reading one whole line from input
         int k = Integer.parseInt(s);
         int[][] num = new int[k][];
         for(int x =0; x<k ; x++)
@@ -42,11 +42,8 @@ public class Solution {
              catch(Exception e){
                  System.out.println("ERROR!");
              }
-             
-   
+ 
         }
-        
-        
-    
+
     }
 }
