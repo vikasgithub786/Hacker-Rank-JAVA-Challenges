@@ -15,7 +15,6 @@ public class Solution
      
        
        System.out.println(num.isProbablePrime(1)? "prime" : "not prime");
-       
-       
+          
    }
 }
