@@ -1,0 +1,28 @@
+import java.util.Scanner;
+import java.util.regex.*;
+
+public class Solution
+{
+   public static void main(String[] args){
+      //creating Scanner class object to take input
+      Scanner in = new Scanner(System.in);  
+
+     // taking input from user and converting it to int type
+      int testCases = Integer.parseInt(in.nextLine());	
+		
+      for(int i =0;i<testCases;testCases++){
+         String pattern = in.nextLine();
+         try{
+              Pattern p = Pattern.compile(pattern);  //if the pattern syntax is wrong exception is thrown
+            } 
+        catch (PatternSyntaxException exception) {
+              System.out.println("Invalid");
+              
+              continue;
+            }
+          System.out.println("Valid");
+         
+   }
+       in.close();
+}
+}
