@@ -30,7 +30,6 @@ import java.io.*;
                
                
                 }
-            System.out.println(ans);
-            
+            System.out.println(ans);          
         }
     }
