@@ -20,8 +20,7 @@ public class Solution
               
               continue;
             }
-          System.out.println("Valid");
-         
+          System.out.println("Valid");        
    }
        in.close();
 }
