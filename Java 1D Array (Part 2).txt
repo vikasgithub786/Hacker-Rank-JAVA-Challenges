@@ -1,0 +1,52 @@
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+    
+    
+    private static boolean isSolvable(int m, int[] arr, int i) {
+    if (i < 0 || arr[i] == 1) return false;
+    if ((i == arr.length - 1) || i + m > arr.length - 1) return true;
+
+    arr[i] = 1;
+    return isSolvable(m, arr, i + 1) || isSolvable(m, arr, i - 1) || isSolvable(m, arr, i + m);  //recursive call
+}
+
+    public static void main(String[] args) {
+       
+        Scanner sc = new Scanner(System.in);			//creating scanner class object to take user input
+        String f = sc.nextLine();
+        int T = Integer.parseInt(f);
+        
+        for(int i =1;i<=T;i++){
+            
+            String s =sc.nextLine();
+            String[] num = s.split(" ");
+            int n = Integer.parseInt(num[0]);
+            int m = Integer.parseInt(num[1]);
+            
+            s = sc.nextLine();
+            num = s.split(" ");
+            int[] arr = new int[num.length];
+            for(int k =0;k<num.length;k++){
+                
+                 arr[k] = Integer.parseInt(num[k]);
+  
+            }
+            
+           boolean b= isSolvable(m, arr, 0);
+           if(b==true){
+               
+               System.out.println("YES");
+           }
+            else{
+                System.out.println("NO");
+            }
+
+        }
+ 
+    }
+}
