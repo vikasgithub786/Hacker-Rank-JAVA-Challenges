@@ -13,8 +13,7 @@ public class Solution {
         scanner.close();
         System.out.printf("US format = $%,.2f %n", payment);		// formatting the output using printf function
         System.out.printf("India format = Rs.%,.2f ", payment);
-        
-        
+                
     }
 }
 
