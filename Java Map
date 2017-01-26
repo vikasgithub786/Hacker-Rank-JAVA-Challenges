@@ -1,0 +1,32 @@
+
+import java.util.*;
+import java.io.*;
+
+class Solution{
+   public static void main(String []argh)
+   {
+      HashMap hm = new HashMap();
+      Scanner in = new Scanner(System.in);
+      int n=Integer.parseInt(in.nextLine());
+      
+      for(int i=0;i<n;i++)
+      {
+         String name=in.nextLine();
+         Integer phone=Integer.parseInt(in.nextLine());
+         hm.put(name,phone);      
+      }
+      while(in.hasNext())
+      {
+         String s=in.nextLine();
+         if(hm.get(s)==null){
+             
+             System.out.println("Not found");
+         } 
+         else{
+             
+            int p =(Integer)hm.get(s);
+              System.out.println(s+"="+p);
+         } 
+      }
+   }
+}
