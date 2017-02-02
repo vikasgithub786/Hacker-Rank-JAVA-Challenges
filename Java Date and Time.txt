@@ -6,7 +6,6 @@ import java.util.regex.*;
 
 public class Solution
 {
-
     public static void main(String[] args) 
    {
         Scanner in = new Scanner(System.in);   			// creating scanner class object
@@ -28,8 +27,6 @@ public class Solution
         
         if(val==5){System.out.println("THURSDAY");}
         if(val==6){System.out.println("FRIDAY");}
-        if(val==7){System.out.println("SATURDAY");}
-        
-        
+        if(val==7){System.out.println("SATURDAY");}      
     } 
 }
