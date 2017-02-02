@@ -1,0 +1,41 @@
+import java.util.*;
+class Solution{
+   
+   public static void main(String []argh)
+   {
+      Scanner sc = new Scanner(System.in);
+      
+      while (sc.hasNext()) {
+         String input=sc.next();
+            char[] cl = input.toCharArray();
+          Stack s = new Stack();
+      boolean is = true;
+      for(char c : cl) {
+          if(c == '(' || c == '{' || c == '[') {
+              s.push(c);
+          }
+
+          if (c == ')' || c == ']' || c == '}') {
+              if(!s.isEmpty()) {
+              char p =  (Character)s.peek();
+              if ((p == '(' && c == ')') || (p == '{' && c == '}') || (p == '[' && c == ']')) {
+                  s.pop();
+              } else {
+                  is = false;
+                  break;
+              }
+          } else {
+              is = false;
+          }
+          }
+      }
+
+      if(!s.isEmpty()) {
+          is = false;
+      }
+      System.out.println(is);
+  
+      }
+      
+   }
+}
